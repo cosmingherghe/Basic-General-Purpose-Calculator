@@ -30,7 +30,7 @@ public class JavaCalculator extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDisplay = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
-        btnOne = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
         btn7 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
@@ -55,11 +55,11 @@ public class JavaCalculator extends javax.swing.JFrame {
         txtDisplay.setRows(5);
         jScrollPane1.setViewportView(txtDisplay);
 
-        btnOne.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
-        btnOne.setText("1");
-        btnOne.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOneActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
 
@@ -198,7 +198,7 @@ public class JavaCalculator extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnOne, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -242,7 +242,7 @@ public class JavaCalculator extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOne, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -294,44 +294,64 @@ public class JavaCalculator extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnOneActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        String btn1text = txtDisplay.getText() + btn1.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn1text);
+    }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        // TODO add your handling code here:
+        String btn4text = txtDisplay.getText() + btn4.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn4text);
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        // TODO add your handling code here:
+        String btn7text = txtDisplay.getText() + btn7.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn7text);
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
-        // TODO add your handling code here:
+        String btn0text = txtDisplay.getText() + btn0.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn0text);
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        // TODO add your handling code here:
+        String btn2text = txtDisplay.getText() + btn2.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn2text);
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        // TODO add your handling code here:
+        String btn5text = txtDisplay.getText() + btn5.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn5text);
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        // TODO add your handling code here:
+        String btn8text = txtDisplay.getText() + btn8.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn8text);
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        // TODO add your handling code here:
+        String btn3text = txtDisplay.getText() + btn3.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn3text);
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        // TODO add your handling code here:
+        String btn6text = txtDisplay.getText() + btn6.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn6text);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        // TODO add your handling code here:
+        String btn9text = txtDisplay.getText() + btn9.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btn9text);
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
@@ -399,6 +419,7 @@ public class JavaCalculator extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn0;
+    private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
     private javax.swing.JButton btn4;
@@ -413,7 +434,6 @@ public class JavaCalculator extends javax.swing.JFrame {
     private javax.swing.JButton btnEqual;
     private javax.swing.JButton btnMinus;
     private javax.swing.JButton btnMult;
-    private javax.swing.JButton btnOne;
     private javax.swing.JButton btnPlus;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
