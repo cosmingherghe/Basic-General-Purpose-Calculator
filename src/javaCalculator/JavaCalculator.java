@@ -10,6 +10,9 @@ package javaCalculator;
  * @author X
  */
 public class JavaCalculator extends javax.swing.JFrame {
+    
+    private double total1 = 0.0;
+    private double total2 = 0.0;
 
     /**
      * Creates new form JavaCalculator
@@ -355,11 +358,15 @@ public class JavaCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
-        // TODO add your handling code here:
+        total2 = total1 + Double.parseDouble(txtDisplay.getText());
+        txtDisplay.setText(Double.toString(total1));
+        total1 = 0.0;
     }//GEN-LAST:event_btnEqualActionPerformed
 
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
-        // TODO add your handling code here:
+        String btnDottext = txtDisplay.getText() + btnDot.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnDottext);
     }//GEN-LAST:event_btnDotActionPerformed
 
     private void btnMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultActionPerformed
@@ -375,11 +382,13 @@ public class JavaCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
-        // TODO add your handling code here:
+        total1 += Double.parseDouble(txtDisplay.getText());
+        txtDisplay.setText("");
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
+        total2 = 0.0;
+        txtDisplay.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
     /**
