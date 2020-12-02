@@ -13,6 +13,13 @@ public class JavaCalculator extends javax.swing.JFrame {
     
     private double total1 = 0.0;
     private double total2 = 0.0;
+    private char mathOperator;
+    
+    private void getOperator(String btnTxt) {
+        mathOperator = btnTxt.charAt(0);
+        total1 += Double.parseDouble(txtDisplay.getText());
+        txtDisplay.setText("");
+    }
 
     /**
      * Creates new form JavaCalculator
@@ -131,7 +138,7 @@ public class JavaCalculator extends javax.swing.JFrame {
         });
 
         btnDiv.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
-        btnDiv.setText("/");
+        btnDiv.setText("÷");
         btnDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDivActionPerformed(evt);
@@ -358,8 +365,22 @@ public class JavaCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
-        total2 = total1 + Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText(Double.toString(total1));
+        switch(mathOperator) {
+            case '+':
+                total2 = total1 + Double.parseDouble(txtDisplay.getText());
+                break;
+            case '-':
+                total2 = total1 - Double.parseDouble(txtDisplay.getText());
+                break;
+            case '÷':
+                total2 = total1 / Double.parseDouble(txtDisplay.getText());
+                break;
+            case 'x':
+                total2 = total1 * Double.parseDouble(txtDisplay.getText());
+                break;
+        }
+        
+        txtDisplay.setText(Double.toString(total2));
         total1 = 0.0;
     }//GEN-LAST:event_btnEqualActionPerformed
 
@@ -370,20 +391,19 @@ public class JavaCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDotActionPerformed
 
     private void btnMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultActionPerformed
-        // TODO add your handling code here:
+        getOperator(btnMult.getText());
     }//GEN-LAST:event_btnMultActionPerformed
 
     private void btnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivActionPerformed
-        // TODO add your handling code here:
+        getOperator(btnDiv.getText());
     }//GEN-LAST:event_btnDivActionPerformed
 
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
-        // TODO add your handling code here:
+        getOperator(btnMinus.getText());
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
-        total1 += Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
+        getOperator(btnPlus.getText());
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
